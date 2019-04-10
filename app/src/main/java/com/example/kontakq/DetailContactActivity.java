@@ -1,5 +1,6 @@
 package com.example.kontakq;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -91,6 +92,8 @@ public class DetailContactActivity extends AppCompatActivity
         this.mKontak.delete(this.selectedKontak);
         this.resetFields("Kontak dihapus..", true);
         this.btnHapus.setEnabled(false);
+        Intent i = new Intent(this,MainActivity.class);
+        this.startActivity(i);
 
     }
 }
